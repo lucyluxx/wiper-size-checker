@@ -6,14 +6,14 @@
   <title>내 차량 와이퍼 사이즈</title>
   <style>
     body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
-    .tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 5px; margin-bottom: 20px; }
+    .tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 5px; margin-bottom: 20px; }
     .tab-btn {
-      border-radius: 8px;
-      padding: 10px;
+      padding: 6px;
       cursor: pointer;
       border: 1px solid #ccc;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 8px;
+      min-width: 90px;
     }
     .tab-btn.active {
       background-color: #333;
@@ -68,257 +68,85 @@
     <input type="text" id="search" placeholder="차종을 검색하세요">
   </div>
 
-  <div id="전차종 보기" class="tab-content active">
-
-<details><summary><strong>아반떼 CN7 (2020~현재)</strong></summary><p>운전석: 600mm<br>조수석: 400mm</p></details>
-<details><summary><strong>그랜저 IG (2016~2020)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
+<div id="전차종 보기" class="tab-content active">
 <details>
-  <summary><strong>그랜드 카니발 (05년 7월 ~ 14년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>뉴 카니발 / R (06년 1월 ~ 14년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>올뉴카니발 (14년 6월 ~ 20년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>카니발 KA4 4세대 (20년 7월 ~ 현재)</strong></summary>
+  <summary><strong>팰리세이드 (19년 ~ 현재)</strong></summary>
   <p>운전석: 650mm<br>조수석: 500mm</p>
 </details>
 <details>
-  <summary><strong>카렌스 II (99년 4월 ~ 06년 4월)</strong></summary>
+  <summary><strong>포터 뉴포터 (86년 ~ 04년)</strong></summary>
+  <p>운전석: 450mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>포터 II (04년 ~ 현재)</strong></summary>
+  <p>운전석: 500mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>아반떼 HD (06년 5월 ~ 10년)</strong></summary>
   <p>운전석: 600mm<br>조수석: 450mm</p>
 </details>
 <details>
-  <summary><strong>뉴 카렌스 (06년 4월 ~ 13년 3월)</strong></summary>
+  <summary><strong>아반떼 MD/MD 쿠페 (10년 8월 ~ 15년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 350mm</p>
+</details>
+<details>
+  <summary><strong>아반떼 AD (15년 ~ 18년)</strong></summary>
   <p>운전석: 650mm<br>조수석: 400mm</p>
 </details>
 <details>
-  <summary><strong>올 뉴 카렌스 (14년 ~ 18년)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 650mm</p>
-</details>
-<details>
-  <summary><strong>모닝 / 뉴 모닝 / 더 뉴 모닝 (04년 ~ 16년)</strong></summary>
-  <p>운전석: 550mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>2017/2019 올 뉴 모닝 (17년 1월 ~ 20년 5월)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 350mm</p>
-</details>
-<details>
-  <summary><strong>모닝 어반 (20년 5월 ~ 현재)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 350mm</p>
-</details>
-<details>
-  <summary><strong>모하비 더 마스터 (20년 ~ 현재)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 500mm</p>
-</details>
-<details>
-  <summary><strong>쏘렌토 MQ4 4세대 (20년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>스포티지 NQ5 (21년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>EV6 (21년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>EV9 (23년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>더 뉴 K5 하이브리드 (15년 7월 ~ 19년)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>K7 프리미어 (19년 6월 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>K8 / 하이브리드 (21년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>K9 / 더 뉴 K9 (12년 ~ 18년 4월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>더 K9 (18년 5월 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-
-<details><summary><strong>아반떼 CN7 (2020~현재)</strong></summary><p>운전석: 600mm<br>조수석: 400mm</p></details>
-<details><summary><strong>그랜저 IG (2016~2020)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
-<details>
-  <summary><strong>그랜드 카니발 (05년 7월 ~ 14년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>뉴 카니발 / R (06년 1월 ~ 14년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>올뉴카니발 (14년 6월 ~ 20년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>카니발 KA4 4세대 (20년 7월 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 500mm</p>
-</details>
-<details>
-  <summary><strong>카렌스 II (99년 4월 ~ 06년 4월)</strong></summary>
+  <summary><strong>아반떼 CN7 (20년 4월 ~ 현재)</strong></summary>
   <p>운전석: 600mm<br>조수석: 450mm</p>
 </details>
 <details>
-  <summary><strong>뉴 카렌스 (06년 4월 ~ 13년 3월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>올 뉴 카렌스 (14년 ~ 18년)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 650mm</p>
-</details>
-<details>
-  <summary><strong>모닝 / 뉴 모닝 / 더 뉴 모닝 (04년 ~ 16년)</strong></summary>
-  <p>운전석: 550mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>2017/2019 올 뉴 모닝 (17년 1월 ~ 20년 5월)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 350mm</p>
-</details>
-<details>
-  <summary><strong>모닝 어반 (20년 5월 ~ 현재)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 350mm</p>
-</details>
-<details>
-  <summary><strong>모하비 더 마스터 (20년 ~ 현재)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 500mm</p>
-</details>
-<details>
-  <summary><strong>쏘렌토 MQ4 4세대 (20년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>스포티지 NQ5 (21년 ~ 현재)</strong></summary>
+  <summary><strong>더 뉴 아반떼 (22년 11월 ~ 현재)</strong></summary>
   <p>운전석: 650mm<br>조수석: 450mm</p>
 </details>
 <details>
-  <summary><strong>EV6 (21년 ~ 현재)</strong></summary>
+  <summary><strong>그랜저 IG (16년 11월 ~ 19년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>더 뉴 그랜저 (20년 ~ 22년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>i40</strong></summary>
   <p>운전석: 650mm<br>조수석: 400mm</p>
 </details>
 <details>
-  <summary><strong>EV9 (23년 ~ 현재)</strong></summary>
+  <summary><strong>제네시스 G80 (16년 7월 ~ 19년 3월)</strong></summary>
   <p>운전석: 650mm<br>조수석: 450mm</p>
 </details>
 <details>
-  <summary><strong>더 뉴 K5 하이브리드 (15년 7월 ~ 19년)</strong></summary>
+  <summary><strong>제네시스 GV80 (20년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>투싼 (04년 4월 ~ 09년 7월)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>투싼 IX / 투싼 iX (09년 ~ 15년 3월)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>올 뉴 투싼 (15년 3월 ~ 20년 9월)</strong></summary>
   <p>운전석: 650mm<br>조수석: 400mm</p>
 </details>
 <details>
-  <summary><strong>K7 프리미어 (19년 6월 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>K8 / 하이브리드 (21년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>K9 / 더 뉴 K9 (12년 ~ 18년 4월)</strong></summary>
+  <summary><strong>투싼 4세대 NX4 (20년 9월 ~ 현재)</strong></summary>
   <p>운전석: 650mm<br>조수석: 400mm</p>
 </details>
 <details>
-  <summary><strong>더 K9 (18년 5월 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-</div><div id="현대" class="tab-content">
-
-<details><summary><strong>아반떼 CN7 (2020~현재)</strong></summary><p>운전석: 600mm<br>조수석: 400mm</p></details>
-
-<details><summary><strong>그랜저 IG (2016~2020)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
-</div><div id="기아" class="tab-content">
-<details>
-  <summary><strong>그랜드 카니발 (05년 7월 ~ 14년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
+  <summary><strong>코나 (18년 ~ 현재)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
 </details>
 <details>
-  <summary><strong>뉴 카니발 / R (06년 1월 ~ 14년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
+  <summary><strong>코나 일렉트릭 EV (18년 ~ 현재)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
 </details>
 <details>
-  <summary><strong>올뉴카니발 (14년 6월 ~ 20년 6월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>카니발 KA4 4세대 (20년 7월 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 500mm</p>
-</details>
-<details>
-  <summary><strong>카렌스 II (99년 4월 ~ 06년 4월)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>뉴 카렌스 (06년 4월 ~ 13년 3월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>올 뉴 카렌스 (14년 ~ 18년)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 650mm</p>
-</details>
-<details>
-  <summary><strong>모닝 / 뉴 모닝 / 더 뉴 모닝 (04년 ~ 16년)</strong></summary>
-  <p>운전석: 550mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>2017/2019 올 뉴 모닝 (17년 1월 ~ 20년 5월)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 350mm</p>
-</details>
-<details>
-  <summary><strong>모닝 어반 (20년 5월 ~ 현재)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 350mm</p>
-</details>
-<details>
-  <summary><strong>모하비 더 마스터 (20년 ~ 현재)</strong></summary>
-  <p>운전석: 600mm<br>조수석: 500mm</p>
-</details>
-<details>
-  <summary><strong>쏘렌토 MQ4 4세대 (20년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>스포티지 NQ5 (21년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>EV6 (21년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>EV9 (23년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>더 뉴 K5 하이브리드 (15년 7월 ~ 19년)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>K7 프리미어 (19년 6월 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>K8 / 하이브리드 (21년 ~ 현재)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 450mm</p>
-</details>
-<details>
-  <summary><strong>K9 / 더 뉴 K9 (12년 ~ 18년 4월)</strong></summary>
-  <p>운전석: 650mm<br>조수석: 400mm</p>
-</details>
-<details>
-  <summary><strong>더 K9 (18년 5월 ~ 현재)</strong></summary>
+  <summary><strong>더 뉴 코나/하이브리드/EV/나린 (20년 10월 ~ 현재)</strong></summary>
   <p>운전석: 650mm<br>조수석: 400mm</p>
 </details>
 <details>
@@ -401,7 +229,207 @@
   <summary><strong>더 K9 (18년 5월 ~ 현재)</strong></summary>
   <p>운전석: 650mm<br>조수석: 400mm</p>
 </details>
-</div><div id="쉐보레" class="tab-content"></div><div id="르노" class="tab-content"></div><div id="쌍용" class="tab-content"></div><div id="벤츠" class="tab-content"></div><div id="bmw" class="tab-content"></div><div id="아우디" class="tab-content"></div><div id="폭스바겐" class="tab-content"></div><div id="렉서스" class="tab-content"></div><div id="혼다" class="tab-content"></div><div id="인피니티" class="tab-content"></div><div id="도요타" class="tab-content"></div><div id="지프" class="tab-content"></div>
+</div>
+<div id="현대" class="tab-content">
+<details>
+  <summary><strong>팰리세이드 (19년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 500mm</p>
+</details>
+<details>
+  <summary><strong>포터 뉴포터 (86년 ~ 04년)</strong></summary>
+  <p>운전석: 450mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>포터 II (04년 ~ 현재)</strong></summary>
+  <p>운전석: 500mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>아반떼 HD (06년 5월 ~ 10년)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>아반떼 MD/MD 쿠페 (10년 8월 ~ 15년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 350mm</p>
+</details>
+<details>
+  <summary><strong>아반떼 AD (15년 ~ 18년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>아반떼 CN7 (20년 4월 ~ 현재)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>더 뉴 아반떼 (22년 11월 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>그랜저 IG (16년 11월 ~ 19년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>더 뉴 그랜저 (20년 ~ 22년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>i40</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>제네시스 G80 (16년 7월 ~ 19년 3월)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>제네시스 GV80 (20년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>투싼 (04년 4월 ~ 09년 7월)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>투싼 IX / 투싼 iX (09년 ~ 15년 3월)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>올 뉴 투싼 (15년 3월 ~ 20년 9월)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>투싼 4세대 NX4 (20년 9월 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>코나 (18년 ~ 현재)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>코나 일렉트릭 EV (18년 ~ 현재)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>더 뉴 코나/하이브리드/EV/나린 (20년 10월 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+</div>
+<div id="기아" class="tab-content">
+<details>
+  <summary><strong>그랜드 카니발 (05년 7월 ~ 14년 6월)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>뉴 카니발 / R (06년 1월 ~ 14년 6월)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>올뉴카니발 (14년 6월 ~ 20년 6월)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>카니발 KA4 4세대 (20년 7월 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 500mm</p>
+</details>
+<details>
+  <summary><strong>카렌스 II (99년 4월 ~ 06년 4월)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>뉴 카렌스 (06년 4월 ~ 13년 3월)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>올 뉴 카렌스 (14년 ~ 18년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 650mm</p>
+</details>
+<details>
+  <summary><strong>모닝 / 뉴 모닝 / 더 뉴 모닝 (04년 ~ 16년)</strong></summary>
+  <p>운전석: 550mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>2017/2019 올 뉴 모닝 (17년 1월 ~ 20년 5월)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 350mm</p>
+</details>
+<details>
+  <summary><strong>모닝 어반 (20년 5월 ~ 현재)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 350mm</p>
+</details>
+<details>
+  <summary><strong>모하비 더 마스터 (20년 ~ 현재)</strong></summary>
+  <p>운전석: 600mm<br>조수석: 500mm</p>
+</details>
+<details>
+  <summary><strong>쏘렌토 MQ4 4세대 (20년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>스포티지 NQ5 (21년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>EV6 (21년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>EV9 (23년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>더 뉴 K5 하이브리드 (15년 7월 ~ 19년)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>K7 프리미어 (19년 6월 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>K8 / 하이브리드 (21년 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 450mm</p>
+</details>
+<details>
+  <summary><strong>K9 / 더 뉴 K9 (12년 ~ 18년 4월)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+<details>
+  <summary><strong>더 K9 (18년 5월 ~ 현재)</strong></summary>
+  <p>운전석: 650mm<br>조수석: 400mm</p>
+</details>
+</div>
+<div id="쉐보레" class="tab-content">
+
+</div>
+<div id="르노" class="tab-content">
+
+</div>
+<div id="쌍용" class="tab-content">
+
+</div>
+<div id="벤츠" class="tab-content">
+
+</div>
+<div id="bmw" class="tab-content">
+
+</div>
+<div id="아우디" class="tab-content">
+
+</div>
+<div id="폭스바겐" class="tab-content">
+
+</div>
+<div id="렉서스" class="tab-content">
+
+</div>
+<div id="혼다" class="tab-content">
+
+</div>
+<div id="인피니티" class="tab-content">
+
+</div>
+<div id="도요타" class="tab-content">
+
+</div>
+<div id="지프" class="tab-content">
+
+</div>
 
   <script>
     const tabBtns = document.querySelectorAll('.tab-btn');
