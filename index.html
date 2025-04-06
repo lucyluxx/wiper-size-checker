@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>내 차량 와이퍼 사이즈 확인</title>
   <style>
     body { font-family: sans-serif; padding: 20px; max-width: 700px; margin: auto; }
     h1 { color: #333; }
+    #search { padding: 10px; width: 100%; margin-bottom: 20px; font-size: 16px; }
     details { margin-bottom: 10px; }
   </style>
 </head>
 <body>
   <h1>🚗 내 차량 와이퍼 사이즈 확인</h1>
+  <input type="text" id="search" placeholder="차종을 검색해보세요 (예: 아반떼)" />
 
-  <details>
-    <summary><strong>현대 아반떼 CN7 (2020~현재)</strong></summary>
-    <p>운전석: 600mm<br>조수석: 400mm</p>
-  </details>
+  <div id="car-list">
+    <details>
+      <summary><strong>현대 아반떼 CN7 (2020~현재)</strong></summary>
+      <p>운전석: 600mm<br>조수석: 400mm</p>
+    </details>
 
-  <details>
-    <summary><strong>현대 그랜저 IG (2016~2020)</strong></summary>
-    <p>운전석: 650mm<br>조수석: 450mm</p>
-  </details>
+    <details>
+      <summary><strong>현대 그랜저 IG (2016~2020)</strong></summary>
+      <p>운전석: 650mm<br>조수석: 450mm</p>
+    </details>
+
+    <details>
+      <summary><strong>기아 쏘렌토 MQ4 (2020~현재)</strong></summary>
+      <p>운전석: 650mm<br>조수석: 450mm</p>
+    </details>
+
+    <!-- 여기에 더 많은 차량 정보 추가 가능 -->
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("search");
+    const carList = document.getElementById("car-list");
+    const allDetails = carList.querySelectorAll("details");
+
+    searchInput.addEventListener("input", () => {
+      const keyword = searchInput.value.toLowerCase();
+      allDetails.forEach(detail => {
+        const text = detail.innerText.toLowerCase();
+        detail.style.display = text.includes(keyword) ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
