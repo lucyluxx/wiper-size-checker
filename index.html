@@ -6,13 +6,13 @@
   <title>내 차량 와이퍼 사이즈</title>
   <style>
     body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
-    .tabs { display: flex; margin-bottom: 20px; }
+    .tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 5px; margin-bottom: 20px; }
     .tab-btn {
-      flex: 1;
       padding: 10px;
       cursor: pointer;
       border: 1px solid #ccc;
       text-align: center;
+      border-radius: 4px;
     }
     .tab-btn.active {
       background-color: #333;
@@ -29,13 +29,30 @@
   <h1>🚘 내 차량 와이퍼 사이즈 확인</h1>
 
   <div class="tabs">
-    <div class="tab-btn active" data-tab="kia">기아</div>
-    <div class="tab-btn" data-tab="hyundai">현대</div>
+    <div class="tab-btn active" data-tab="현대">현대</div>
+    <div class="tab-btn" data-tab="기아">기아</div>
+    <div class="tab-btn" data-tab="쉐보레">쉐보레</div>
+    <div class="tab-btn" data-tab="르노">르노</div>
+    <div class="tab-btn" data-tab="쌍용">쌍용</div>
+    <div class="tab-btn" data-tab="벤츠">벤츠</div>
+    <div class="tab-btn" data-tab="bmw">bmw</div>
+    <div class="tab-btn" data-tab="아우디">아우디</div>
+    <div class="tab-btn" data-tab="폭스바겐">폭스바겐</div>
+    <div class="tab-btn" data-tab="렉서스">렉서스</div>
+    <div class="tab-btn" data-tab="혼다">혼다</div>
+    <div class="tab-btn" data-tab="인피니티">인피니티</div>
+    <div class="tab-btn" data-tab="도요타">도요타</div>
+    <div class="tab-btn" data-tab="지프">지프</div>
   </div>
 
   <input type="text" id="search" placeholder="차종을 검색하세요">
 
-  <div id="kia" class="tab-content active">
+  <div id="현대" class="tab-content active">
+    <details><summary><strong>아반떼 CN7 (2020~현재)</strong></summary><p>운전석: 600mm<br>조수석: 400mm</p></details>
+    <details><summary><strong>그랜저 IG (2016~2020)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
+  </div>
+
+  <div id="기아" class="tab-content">
     <details><summary><strong>그랜드 카니발 (05년 7월 ~ 14년 6월)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
     <details><summary><strong>뉴 카니발 / R (06년 1월 ~ 14년 6월)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
     <details><summary><strong>올뉴카니발 (14년 6월 ~ 20년 6월)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
@@ -58,10 +75,19 @@
     <details><summary><strong>더 K9 (18년 5월 ~ 현재)</strong></summary><p>운전석: 650mm<br>조수석: 400mm</p></details>
   </div>
 
-  <div id="hyundai" class="tab-content">
-    <details><summary><strong>아반떼 CN7 (2020~현재)</strong></summary><p>운전석: 600mm<br>조수석: 400mm</p></details>
-    <details><summary><strong>그랜저 IG (2016~2020)</strong></summary><p>운전석: 650mm<br>조수석: 450mm</p></details>
-  </div>
+  <!-- 빈 콘텐츠 영역 -->
+  <div id="쉐보레" class="tab-content"></div>
+  <div id="르노" class="tab-content"></div>
+  <div id="쌍용" class="tab-content"></div>
+  <div id="벤츠" class="tab-content"></div>
+  <div id="bmw" class="tab-content"></div>
+  <div id="아우디" class="tab-content"></div>
+  <div id="폭스바겐" class="tab-content"></div>
+  <div id="렉서스" class="tab-content"></div>
+  <div id="혼다" class="tab-content"></div>
+  <div id="인피니티" class="tab-content"></div>
+  <div id="도요타" class="tab-content"></div>
+  <div id="지프" class="tab-content"></div>
 
   <script>
     const tabBtns = document.querySelectorAll('.tab-btn');
@@ -74,6 +100,7 @@
         tabContents.forEach(tc => tc.classList.remove('active'));
         btn.classList.add('active');
         document.getElementById(btn.dataset.tab).classList.add('active');
+        searchInput.value = '';
       });
     });
 
@@ -87,4 +114,5 @@
   </script>
 </body>
 </html>
+
 
