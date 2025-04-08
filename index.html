@@ -3640,10 +3640,9 @@
         searchInput.value = '';
 
         // 필터링 초기화 - 모든 차량 다시 표시
-document.querySelectorAll('.tab-content details').forEach(detail => {
+document.querySelectorAll('.tab-content.active details').forEach(detail => {
   detail.style.display = 'block';
-      });
-    });
+});
 
     searchInput.addEventListener('input', () => {
   const keyword = searchInput.value.toLowerCase().replace(/\s+/g, '');
