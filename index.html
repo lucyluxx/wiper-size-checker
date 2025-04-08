@@ -3631,21 +3631,34 @@
   const tabContents = document.querySelectorAll('.tab-content');
   const searchInput = document.getElementById('search');
 
+  // 탭 버튼 클릭 이벤트
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      // 모든 탭 버튼 및 콘텐츠에서 active 제거
       tabBtns.forEach(b => b.classList.remove('active'));
       tabContents.forEach(tc => tc.classList.remove('active'));
+
+      // 클릭한 탭에 active 추가
       btn.classList.add('active');
       document.getElementById(btn.dataset.tab).classList.add('active');
+
+      // 검색어 초기화
       searchInput.value = '';
+
+      // 필터링 초기화 - 모든 차량 다시 표시
+      document.querySelectorAll('.tab-content details').forEach(detail => {
+        detail.style.display = 'block';
+      });
     });
   });
 
+  // 검색 입력 필터링
   searchInput.addEventListener('input', () => {
     const keyword = searchInput.value.toLowerCase().replace(/\s+/g, '');
+
     document.querySelectorAll('.tab-content.active details').forEach(detail => {
       const text = detail.innerText.toLowerCase().replace(/\s+/g, '');
-      detail.style.display = text.includes(keyword) ? 'block' : 'none';
+      detail.style.display = !keyword || text.includes(keyword) ? 'block' : 'none';
     });
   });
 </script>
