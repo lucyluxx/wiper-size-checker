@@ -3627,31 +3627,28 @@
 </div>
 
   <script>
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
-    const searchInput = document.getElementById('search');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+  const searchInput = document.getElementById('search');
 
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
-        tabContents.forEach(tc => tc.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.tab).classList.add('active');
-        searchInput.value = '';
-
-        // 필터링 초기화 - 모든 차량 다시 표시
-document.querySelectorAll('.tab-content.active details').forEach(detail => {
-  detail.style.display = 'block';
-});
-
-    searchInput.addEventListener('input', () => {
-  const keyword = searchInput.value.toLowerCase().replace(/\s+/g, '');
-  document.querySelectorAll('.tab-content.active details').forEach(detail => {
-    const text = detail.innerText.toLowerCase().replace(/\s+/g, '');
-    detail.style.display = text.includes(keyword) ? 'block' : 'none';
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(tc => tc.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      searchInput.value = '';
+    });
   });
-});
-  </script>
+
+  searchInput.addEventListener('input', () => {
+    const keyword = searchInput.value.toLowerCase().replace(/\s+/g, '');
+    document.querySelectorAll('.tab-content.active details').forEach(detail => {
+      const text = detail.innerText.toLowerCase().replace(/\s+/g, '');
+      detail.style.display = text.includes(keyword) ? 'block' : 'none';
+    });
+  });
+</script>
 </body>
 </html>
 
